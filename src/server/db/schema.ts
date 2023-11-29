@@ -16,7 +16,7 @@ import {
  *
  * @see https://orm.drizzle.team/docs/goodies#multi-project-schema
  */
-export const mysqlTable = mysqlTableCreator((name) => `next-ai_${name}`);
+export const mysqlTable = mysqlTableCreator((name) => `ai-toolbox_${name}`);
 
 export const posts = mysqlTable(
   "post",
