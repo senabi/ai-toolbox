@@ -27,8 +27,11 @@ dependencies:
     specifier: ^10.43.6
     version: 10.44.1
   drizzle-orm:
-    specifier: ^0.28.5
+    specifier: ^0.28.6
     version: 0.28.6(@planetscale/database@1.11.0)(mysql2@3.6.5)
+  geist:
+    specifier: ^1.1.0
+    version: 1.1.0(next@14.0.4-canary.25)
   next:
     specifier: 14.0.4-canary.25
     version: 14.0.4-canary.25(react-dom@18.2.0)(react@18.2.0)
@@ -1505,6 +1508,14 @@ packages:
   /function-bind@1.1.2:
     resolution: {integrity: sha512-7XHNxH7qX9xG5mIwxkhumTox/MIRNcOgDrxWsMt2pAr23WHp6MrRlN7FBSFpCpr+oVO0F744iUgR82nJMfG2SA==}
     dev: true
+
+  /geist@1.1.0(next@14.0.4-canary.25):
+    resolution: {integrity: sha512-UwZH+ekwAt1T5XYlviFD+jUXFeRRawDDT8RtpJ//IHTPXlVIO6BCcZ8M0Pxg1K/FT3H8HLn3KJqMsPLHbo1HNg==}
+    peerDependencies:
+      next: ^13.2 || ^14
+    dependencies:
+      next: 14.0.4-canary.25(react-dom@18.2.0)(react@18.2.0)
+    dev: false
 
   /generate-function@2.3.1:
     resolution: {integrity: sha512-eeB5GfMNeevm/GRYq20ShmsaGcmI81kIX2K9XQx5miC8KdHaC6Jm0qQ8ZNeGOi7wYB8OsdxKs+Y2oVuTFuVwKQ==}

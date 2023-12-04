@@ -1,3 +1,30 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  :root {
+    --bg-subtle: #f9fafb;
+    --bg-subtle-hover: #f3f4f6;
+    --bg-subtle-pressed: #e5e7eb;
+    --bg-base: #ffffff;
+    --bg-base-hover: #f9fafb;
+    --bg-base-pressed: #f3f4f6;
+    --bg-component: #f1f3f5;
+    --bg-switch-off: #e5e7eb;
+    --bg-switch-off-hover: #d1d5db;
+    --bg-overlay: #9a9ca0;
+    --bg-disabled: #f3f4f6;
+    --bg-highlight: #eff6ff;
+    --bg-field: #f9fafb;
+    --bg-field-hover: #f3f4f6;
+    --bg-highlight-hover: #dbeafe;
+  }
+}
+
+@layer base {
+  body {
+    @apply bg-bg-base transition-colors;
+  }
+}
+

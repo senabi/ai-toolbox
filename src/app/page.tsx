@@ -4,8 +4,6 @@ import { CreatePost } from "@/app/_components/create-post";
 import { Hello, Latest } from "./streamed-queries";
 import { Suspense } from "react";
 
-// export const dynamic = "force-static";
-
 export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-center bg-gradient-to-b from-[#2e026d] to-[#15162c] text-white">
@@ -54,7 +52,6 @@ function CrudShowcase() {
       <Suspense fallback="Loading latest post...">
         <Latest />
       </Suspense>
-
       <CreatePost />
     </div>
   );

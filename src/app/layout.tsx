@@ -1,13 +1,24 @@
 import "@/styles/globals.css";
 
-import { Inter } from "next/font/google";
-import { cookies } from "next/headers";
+import LocalFont from "next/font/local";
+import { GeistSans } from "geist/font/sans";
+import { GeistMono } from "geist/font/mono";
+import { ServerProviders } from "./server-providers";
 
-import { TRPCReactProvider } from "@/trpc/react";
-
-const inter = Inter({
-  subsets: ["latin"],
-  variable: "--font-sans",
+const fontSatoshi = LocalFont({
+  src: [
+    {
+      path: "../styles/Satoshi-Variable.ttf",
+      weight: "300 900",
+      style: "normal",
+    },
+    {
+      path: "../styles/Satoshi-VariableItalic.ttf",
+      weight: "300 900",
+      style: "italic",
+    },
+  ],
+  variable: "--font-satoshi-sans",
 });
 
 export const metadata = {
@@ -23,10 +34,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`font-sans ${inter.variable}`}>
-        <TRPCReactProvider cookies={cookies().toString()}>
-          {children}
-        </TRPCReactProvider>
+      <body
+        className={`font-sans ${fontSatoshi.variable} ${GeistSans.variable} ${GeistMono.variable}`}
+      >
+        <ServerProviders>{children}</ServerProviders>
       </body>
     </html>
   );
